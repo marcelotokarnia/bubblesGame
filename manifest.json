@@ -1,0 +1,20 @@
+{
+  "background_color": "#ffffff",
+  "theme_color": "#333333",
+  "name": "Bubble Game",
+  "short_name": "Bubbles",
+  "display": "minimal-ui",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/marcelotokarnia/image/upload/h_192,w_192/v1594856646/bubbleGame_ciwxhn.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://res.cloudinary.com/marcelotokarnia/image/upload/h_512,w_512/v1594856646/bubbleGame_ciwxhn.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

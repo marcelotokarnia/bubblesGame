@@ -1,0 +1,15 @@
+{
+  "name": "M20200715",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:planhat/M20200715.git",
+  "author": "Marcelo Tokarnia <marcelo.tokarnia@klarna.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "serve"
+  },
+  "dependencies": {
+    "serve": "^11.3.2"
+  }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="The bubble game" />
+    <meta name="keywords" content="Canvas,Bubbles,Planhat,MarceloTokarnia" />
+    <meta name="author" content="Marcelo Tokarnia" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="The Bubble Game" />
+    <meta property="og:description" content="The Bubble Game" />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/marcelotokarnia/image/upload/c_scale,w_600/v1594856646/bubbleGame_ciwxhn.png"
+    />
+    <meta property="og:url" content="https://bubbles.tokks.tech" />
+    <meta name="twitter:title" content="The Bubble Game" />
+    <meta name="twitter:description" content="The Bubble Game" />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/marcelotokarnia/image/upload/c_scale,w_600/v1594856646/bubbleGame_ciwxhn.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="manifest" href="./manifest.json" />
+    <title>The Bubble Game</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <style>
+      summary {
+        text-decoration: none;
+        cursor: pointer;
+      }
+      summary:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="w-100 tc">
+      <div id="game" class="dn">
+        <h1>The bubble game</h1>
+        <div id="counters" class="center ph5">
+          <span id="customers-counter" class="f4"> </span>
+          <span id="time-counter" class="fl f4"> </span>
+          <span id="score-counter" class="fr f4"> </span>
+        </div>
+        <div id="game-over" class="bg-black-90 fixed w-100 pv3 mv3 white dn">
+          <h1>
+            GAME OVER
+          </h1>
+          <div>
+            <button
+              class="f6 grow no-underline br-pill ph3 pv2 mb2 dib black bg-white pointer"
+              id="restart"
+            >
+              Restart
+            </button>
+          </div>
+        </div>
+        <canvas class="ba br2">
+          Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <div id="stats" class="center ph5">
+          <span id="can-heal" class="dn fr">🏥</span>
+          <span id="is-heal-pressed" class="dn fr">💊</span>
+          <span id="is-max-heal-pressed" class="dn fr">🚒</span>
+        </div>
+      </div>
+      <div id="instructions" class="">
+        <h1>Welcome to</h1>
+        <img
+          src="https://res.cloudinary.com/marcelotokarnia/image/upload/c_scale,w_600/v1594856646/bubbleGame_ciwxhn.png"
+        />
+        <p>This is a customer success simulation game</p>
+        <h3>Rules:</h3>
+        <p>
+          Each circle represents a customer, the bigger the circle, the more they are paying (5~20)
+        </p>
+        <p>They move from left to right representing their annual subscription</p>
+        <p><b>They pay daily, increasing your score</b>, unless they churn</p>
+        <details>
+          <summary>How customers churn</summary>
+          <details>
+            <summary
+              >by them not getting contacted often enough (dropping from top to bottom)</summary
+            >
+            <p>which takes 90 days</p>
+            <p><b>And can be prevented by clicking on them with the mouse to bubble them up</b></p>
+          </details>
+          <details>
+            <summary>by them reaching the end of their subscription unhappy (red)</summary>
+            <p>
+              You can make your customers a little happier by clicking on them while holding the G
+              key
+            </p>
+            <p>
+              <b>But you can only do it once every 12 days</b>(🏥 will show up on the bottom right
+              when available)
+            </p>
+          </details>
+        </details>
+
+        <details>
+          <summary>Extra rules</summary>
+          <details>
+            <summary>Happy Customers (green circles)</summary>
+            <p>When renewing their subscription they might pay more</p>
+            <p>When extra happy they might pay more</p>
+            <p>Might need less contact (take slightly longer to drop)</p>
+          </details>
+          <details>
+            <summary>Sad Customers (red circles)</summary>
+            <p><b>When extra sad they might pay less</b></p>
+            <p><b>Need special care</b></p>
+            <p>Instead of holding G key, you need to hold R key to click them</p>
+            <p>if you hold the wrong key you still have to wait 12 days to do it again</p>
+          </details>
+        </details>
+
+        <h3>The game ends after 2 years, Good luck 🎉</h3>
+        <button
+          id="start"
+          class="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black pointer"
+        >
+          Start Playing
+        </button>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="../scripts/index.mjs"></script>
+</html>
